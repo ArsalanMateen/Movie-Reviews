@@ -1,0 +1,118 @@
+.formPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  background: #1c2333;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 8px;
+}
+.subtitle {
+  color: #8b949e;
+  font-size: 0.9rem;
+  margin-bottom: 28px;
+}
+.group {
+  margin-bottom: 20px;
+}
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #8b949e;
+  margin-bottom: 6px;
+}
+.textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 180px;
+  resize: vertical;
+  padding: 10px 12px;
+  background: #1c2333;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: #e6edf3;
+  font: inherit;
+  line-height: 1.5;
+}
+.textarea:focus {
+  outline: none;
+  border-color: #6c5ce7;
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.18);
+}
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  background: #6c5ce7;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.submitButton:hover:not(:disabled) {
+  background: #5a4bd1;
+}
+.submitButton:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+.success {
+  text-align: center;
+  padding: 40px 20px;
+}
+.successIcon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.successSvg {
+  color: #4ade80;
+}
+.successText {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #e6edf3;
+  margin-bottom: 20px;
+}
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #4ade80;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+.backButton:hover {
+  opacity: 0.9;
+  color: #000;
+}
