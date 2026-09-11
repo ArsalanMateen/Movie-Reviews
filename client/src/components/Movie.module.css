@@ -1,0 +1,441 @@
+.movieDetail {
+  max-width: 1000px;
+}
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 24px;
+  transition: all 0.15s ease;
+}
+.back:hover {
+  color: #cbd5e1;
+  transform: translateX(-2px);
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+.poster {
+  width: 280px;
+  height: 420px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+.info {
+  flex: 1;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e6edf3;
+  margin-bottom: 12px;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.year,
+.runtime {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+.genres {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.genreTag {
+  background: #252d3d;
+  color: #8b949e;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+}
+.plotWrapper {
+  margin-bottom: 20px;
+}
+.plot {
+  color: #8b949e;
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+}
+.plotExpanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.plotToggle {
+  background: none;
+  border: 0;
+  color: #6c5ce7;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+.plotToggle:hover {
+  color: #5a4bd1;
+  text-decoration: underline;
+}
+.stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+.stat {
+  text-align: center;
+}
+.statValue {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e6edf3;
+}
+.statLabel {
+  font-size: 0.75rem;
+  color: #6e7681;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.cast {
+  margin-bottom: 20px;
+}
+.castTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+.castList {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+.reviewsHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #30363d;
+}
+.reviewsTitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+}
+.reviewsSection,
+.reviewsList {
+  width: 100%;
+}
+.composer {
+  background: rgba(17, 20, 29, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+.composerBody {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+.composerAvatar,
+.guestAvatar,
+.reviewAvatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.composerAvatar,
+.reviewAvatar {
+  font-weight: 700;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+.composerContent {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.composerTextarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 60px;
+  max-height: 140px;
+  resize: vertical;
+  background: rgba(10, 13, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #f1f5f9;
+  font: inherit;
+  line-height: 1.55;
+}
+.composerTextarea:focus {
+  outline: none;
+  border-color: rgba(108, 92, 231, 0.6);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.18);
+}
+.composerFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.counter {
+  font-size: 0.75rem;
+  color: #64748b;
+  font-weight: 500;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.submitButton {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.02);
+  color: #e2e8f0;
+  border: 1px solid rgba(168, 85, 247, 0.42);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+.submitButton:hover:not(:disabled) {
+  background: rgba(168, 85, 247, 0.09);
+  border-color: rgba(192, 132, 252, 0.85);
+  transform: translateY(-1px);
+}
+.submitButton:disabled {
+  color: #475569;
+  cursor: not-allowed;
+}
+.btnIcon {
+  color: #c084fc;
+}
+.cancelButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #8b949e;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.cancelButton:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.error {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #f87171;
+}
+.guestNotice {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  margin-bottom: 24px;
+}
+.guestAvatar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: #64748b;
+}
+.guestText {
+  font-size: 0.88rem;
+  color: #8b949e;
+}
+.guestLink {
+  color: #a29bfe;
+  font-weight: 600;
+  text-decoration: none;
+}
+.guestLink:hover {
+  text-decoration: underline;
+}
+.reviewCard {
+  display: flex;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(17, 20, 29, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: all 0.15s ease;
+}
+.reviewCard:hover {
+  background: rgba(17, 20, 29, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.reviewContent {
+  flex: 1;
+  min-width: 0;
+}
+.reviewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.reviewAuthor {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+.reviewMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.reviewDate {
+  font-size: 0.78rem;
+  color: #64748b;
+}
+.reviewActions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.actionButton {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.editButton {
+  color: #a29bfe;
+  border-color: rgba(108, 92, 231, 0.35);
+}
+.deleteButton {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.35);
+}
+.actionButton:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+.reviewText {
+  font-size: 0.88rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+.spinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .poster {
+    width: 200px;
+    height: 300px;
+    align-self: center;
+  }
+}
+@media (max-width: 576px) {
+  .composer {
+    padding: 14px;
+    border-radius: 12px;
+  }
+  .composerBody {
+    gap: 12px;
+  }
+  .composerAvatar,
+  .guestAvatar {
+    width: 32px;
+    height: 32px;
+  }
+  .composerTextarea {
+    min-height: 70px;
+    padding: 10px 12px;
+    font-size: 0.88rem;
+  }
+  .submitButton {
+    width: 36px;
+    height: 36px;
+  }
+  .guestNotice {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+  .guestText {
+    font-size: 0.82rem;
+  }
+  .reviewCard {
+    padding: 14px 12px;
+    gap: 12px;
+  }
+  .reviewAvatar {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  .reviewHeader {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .reviewText {
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+}
