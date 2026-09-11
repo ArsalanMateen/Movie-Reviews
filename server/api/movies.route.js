@@ -5,6 +5,8 @@ import ReviewsController from "./reviews.controller.js";
 const router = express.Router();
 
 router.route("/").get(MoviesController.apiGetMovies);
+router.route("/id/:id").get(MoviesController.apiGetMovieById);
+router.route("/genres").get(MoviesController.apiGetGenres);
 
 router
   .route("/reviews")
