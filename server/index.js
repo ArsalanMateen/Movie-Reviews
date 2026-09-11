@@ -3,6 +3,7 @@ import mongodb from "mongodb";
 import dotenv from "dotenv";
 import MoviesDAO from "./dao/moviesDAO.js";
 import ReviewsDAO from "./dao/reviewsDAO.js";
+import UsersDAO from "./dao/usersDAO.js";
 
 // ECONNREFUSED error
 import dns from "node:dns/promises";
@@ -14,10 +15,13 @@ async function main() {
   const port = process.env.PORT || 8000;
 
   try {
+    // connect to the MongoDB cluster
     await client.connect();
 
+    // connect to the database
     await MoviesDAO.injectDB(client);
     await ReviewsDAO.injectDB(client);
+    await UsersDAO.injectDB(client);
 
     app.listen(port, () => {
       console.log(`Server is running on port: ${port}`);
