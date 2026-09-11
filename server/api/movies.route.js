@@ -1,6 +1,7 @@
 import express from "express";
 import MoviesController from "./movies.controller.js";
 import ReviewsController from "./reviews.controller.js";
+import UsersController from "./users.controller.js";
 
 const router = express.Router();
 
@@ -13,5 +14,7 @@ router
   .post(ReviewsController.apiPostReview)
   .put(ReviewsController.apiUpdateReview)
   .delete(ReviewsController.apiDeleteReview);
+
+router.route("/users/login").post(UsersController.apiLogin);
 
 export default router;
