@@ -1,6 +1,7 @@
 import app from "./server.js";
 import mongodb from "mongodb";
 import dotenv from "dotenv";
+import MoviesDAO from "./dao/moviesDAO.js";
 
 // ECONNREFUSED error
 import dns from "node:dns/promises";
@@ -13,6 +14,8 @@ async function main() {
 
   try {
     await client.connect();
+
+    await MoviesDAO.injectDB(client);
 
     app.listen(port, () => {
       console.log(`Server is running on port: ${port}`);
