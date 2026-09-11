@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: movie.reviews
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MOVIEREVIEWS_NS
+        value: sample_mflix
+      - key: MOVIEREVIEWS_DB_URI
+        sync: false
