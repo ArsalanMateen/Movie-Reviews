@@ -1,0 +1,209 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #11141d 0%, #0a0c13 100%);
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  user-select: none;
+}
+.logo {
+  padding: 20px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.logoImage {
+  width: 180px;
+}
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 12px;
+}
+.sectionTitle {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #64748b;
+  padding: 0 12px 8px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.navItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  position: relative;
+}
+.navItem:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f8fafc;
+  transform: translateX(2px);
+}
+.navItem:hover .navIcon {
+  color: #c4b5fd;
+}
+.navItemActive {
+  background: linear-gradient(
+    90deg,
+    rgba(108, 92, 231, 0.18),
+    rgba(108, 92, 231, 0.04)
+  );
+  color: #fff;
+  font-weight: 600;
+}
+.navItemActive::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  background: linear-gradient(180deg, #6c5ce7, #a29bfe);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.8);
+}
+.navItemActive .navIcon {
+  color: #a29bfe;
+  filter: drop-shadow(0 0 6px rgba(108, 92, 231, 0.6));
+}
+.navIcon {
+  flex-shrink: 0;
+  color: #64748b;
+  transition: color 0.15s ease;
+}
+.navLabel,
+.profileDetails,
+.guestDetails {
+  flex: 1;
+  min-width: 0;
+}
+.pillTag {
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.footer {
+  padding: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.2);
+}
+.profileCard,
+.guestProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 12px;
+}
+.avatar,
+.guestAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.avatar {
+  position: relative;
+  background: linear-gradient(135deg, #6c5ce7, #8c7ae6);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: white;
+  box-shadow: 0 2px 8px rgba(108, 92, 231, 0.4);
+  line-height: 1;
+}
+.statusDot {
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 9px;
+  height: 9px;
+  background: #4ade80;
+  border-radius: 50%;
+  border: 2px solid #11141d;
+  box-shadow: 0 0 6px #4ade80;
+}
+.profileName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.logoutButton {
+  background: transparent;
+  border: 0;
+  color: #64748b;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  transition: all 0.15s ease;
+}
+.logoutButton:hover {
+  background: rgba(248, 113, 113, 0.15);
+  color: #f87171;
+}
+.guestProfile {
+  gap: 12px;
+  border-color: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.guestProfile:hover {
+  background: rgba(108, 92, 231, 0.08);
+  border-color: rgba(108, 92, 231, 0.35);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.guestAvatar {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  color: #8b949e;
+  transition: all 0.15s ease;
+}
+.guestName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+.guestArrow {
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
